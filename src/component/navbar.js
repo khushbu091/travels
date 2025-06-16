@@ -5,7 +5,7 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-gradient-to-r from-cyan-400 via-purple-500 to-rose-500 text-black px-6 py-4 shadow-md fixed top-0 w-full z-50">
+  <nav className="bg-[#DA9100] text-black px-6 py-4 shadow-md fixed top-0 w-full z-50">
       <div className="flex items-center justify-between">
         {/* Logo */}
         <div className="text-3xl font-bold tracking-widest font-serif text-white">

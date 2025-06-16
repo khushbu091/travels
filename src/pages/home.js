@@ -1,8 +1,8 @@
 import React from "react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import hero from "../image/hero.png";
-import bg from "../image/bg2.jpg";
+import hero from "../image/hero3.webp";
+import bg from "../image/bg4.jpg";
 import aboutimg from "../image/about.png";
 import bg2 from "../image/bg3.jpg"
 import hero2 from "../image/hero2.png";
@@ -12,13 +12,13 @@ import choose3 from "../image/choose3.png";
 import choose4 from "../image/choose4.png";
 import gal1 from "../image/blackjack.png";
 import gal2 from "../image/32card.png";
-import gal3 from "../image/777.jpg";
+import gal3 from "../image/777-1.jpg";
 import gal4 from "../image/aviator.jpg";
 import gal5 from "../image/poker.jpg";
 import gal6 from "../image/roulette.avif";
-import gal7 from "../image/rummy.png";
-import gal8 from "../image/livetable.webp";
-import gal9 from "../image/sport.jpg";
+import gal7 from "../image/rumy.jpg";
+import gal8 from "../image/live.jpg";
+import gal9 from "../image/criket.avif";
 
 const games = [
   { title: 'BLACKJACK', image: gal1 },
@@ -41,7 +41,7 @@ const Home = () => {
         className="absolute inset-0 bg-cover bg-center z-0"
         style={{
           backgroundImage: `url(${bg})`,
-          filter: "blur(5px) brightness(0.4)", // 👈 blur + darkness
+          filter: "blur(2px) brightness(0.9)", // 👈 blur + darkness
         }}
       ></div>
 
@@ -56,7 +56,7 @@ const Home = () => {
             Why Choose Reddy Anna Book?
           </h4>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">
-            Play the Best Casino <br /> Games Online Today
+            Play the Best Sports <br /> Games Online Today
           </h1>
           <p className="text-gray-300 mb-8 max-w-md mx-auto md:mx-0 font-semibold">
             Reddy Anna Book is India’s most trusted platform for online cricket betting. 
@@ -69,10 +69,10 @@ const Home = () => {
             at every step.
           </p>
           <div className="flex justify-center md:justify-start space-x-4">
-            <button className="bg-gradient-to-r from-blue-500 to-pink-500 px-5 py-2 font-semibold rounded-md text-white hover:scale-105 transition">
+            <button className="bg-[#DA9100] px-5 py-2 font-semibold rounded-md text-white hover:scale-105 transition">
               ▶ Play Now !
             </button>
-            <button className="bg-gradient-to-r from-pink-500 to-cyan-400 px-5 py-2 font-semibold rounded-md text-white hover:scale-105 transition">
+            <button className="bg-[#DA9100] px-5 py-2 font-semibold rounded-md text-white hover:scale-105 transition">
               ▶ Join Us
             </button>
           </div>
@@ -82,8 +82,8 @@ const Home = () => {
         <div className="w-full md:w-1/2 mb-10 md:mb-0 flex justify-center">
           <img
             src={hero}
-            alt="Casino"
-            className="w-80 md:w-[400px] lg:w-[650px] drop-shadow-xl"
+            alt="cricket"
+            className="w-96 md:w-[550px] lg:w-[600px] object-cover object-top h-[600px] overflow-hidden"
           />
         </div>
       </div>
@@ -121,7 +121,7 @@ const Home = () => {
           <p className="text-gray-300 mb-8">
             These platforms offer a wide range of games from traditional casino games like poker, blackjack and roulette to more modern games like video slots and virtual sports betting. Online casinos have the advantage of being accessible from anywhere at any time making them a convenient option for many players.
           </p>
-          <button className="bg-gradient-to-r from-blue-400 to-pink-500 text-white font-semibold px-6 py-2 rounded-md hover:scale-105 transition flex items-center gap-2">
+          <button className="bg-[#DA9100] text-white font-semibold px-6 py-2 rounded-md hover:scale-105 transition flex items-center gap-2">
             <span>◀</span> Read More <span>▶</span>
           </button>
         </div>
@@ -163,7 +163,7 @@ const Home = () => {
                 { title: "Earning Loyalty Rewards", image: choose4 },
                 ].map((item, index) => (
                 <div key={index} className="flex items-start space-x-4">
-                    <div className="min-w-[74px] min-h-[74px] rounded-full bg-gradient-to-r from-pink-400 to-blue-400 flex items-center justify-center p-3">
+                    <div className="min-w-[74px] min-h-[74px] rounded-full bg-[#DA9100] flex items-center justify-center p-3">
                     <img
                         src={item.image}
                         alt={item.title}
@@ -239,10 +239,10 @@ const Home = () => {
       <section className="grid md:grid-cols-2 gap-10 items-start">
         {/* Left Text Content */}
         <section>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-4xl md:text-3xl font-bold mb-6">
             <span className="text-cyan-400">Contact</span>{" "}
-            <span className="text-purple-400">For More</span>{" "}
-            <span className="text-pink-500">Information</span>
+            <span className="text-cyan-400">For More</span>{" "}
+            <span className="text-cyan-400">Information</span>
           </h2>
           <p className="text-lg leading-relaxed mb-6">
             Online casinos have become a popular form of entertainment for
@@ -289,7 +289,7 @@ const Home = () => {
           ></textarea>
           <button
             type="submit"
-            className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-500 text-white font-semibold px-6 py-3 rounded shadow-lg hover:from-pink-500 hover:to-cyan-400 transition duration-300"
+            className="bg-[#DA9100]  text-white font-semibold px-6 py-3 rounded shadow-lg hover:from-pink-500 hover:to-cyan-400 transition duration-300"
           >
             Submit Now
           </button>
@@ -352,7 +352,7 @@ const Home = () => {
                 placeholder="Insert Your Email Address"
                 className="w-full px-4 py-2 rounded-l bg-white text-black focus:outline-none"
               />
-              <button className="px-4 py-2 rounded-r bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-500 text-white">
+              <button className="px-4 py-2 rounded-r bg-[#DA9100] text-white">
                 →
               </button>
             </div>
