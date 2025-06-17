@@ -1,7 +1,7 @@
 import React from "react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import hero from "../image/hero3.webp";
+import hero from "../image/cri-hero.png";
 import bg from "../image/bg4.jpg";
 import aboutimg from "../image/about.png";
 import bg2 from "../image/bg3.jpg"
@@ -19,7 +19,7 @@ import gal6 from "../image/roulette.avif";
 import gal7 from "../image/rumy.jpg";
 import gal8 from "../image/live.jpg";
 import gal9 from "../image/criket.avif";
-
+import con_bg from "../image/bg.avif";
 const games = [
   { title: 'BLACKJACK', image: gal1 },
   { title: '32 Card', image: gal2 },
@@ -41,7 +41,7 @@ const Home = () => {
         className="absolute inset-0 bg-cover bg-center z-0"
         style={{
           backgroundImage: `url(${bg})`,
-          filter: "blur(2px) brightness(0.9)", // 👈 blur + darkness
+          filter: "blur(2px) brightness(0.5)", // 👈 blur + darkness
         }}
       ></div>
 
@@ -83,7 +83,7 @@ const Home = () => {
           <img
             src={hero}
             alt="cricket"
-            className="w-96 md:w-[550px] lg:w-[600px] object-cover object-top h-[600px] overflow-hidden"
+            className="w-96 md:w-[550px] lg:w-[600px] object-cover object-top h-[600px] overflow-hidden animate-float"
           />
         </div>
       </div>
@@ -97,7 +97,7 @@ const Home = () => {
           <img
             src={aboutimg}
             alt="Casino Visual"
-            className="w-80 md:w-[400px] lg:w-[650px] drop-shadow-xl object-contain"
+            className="w-80 md:w-[400px] lg:w-[550px] drop-shadow-xl object-contain animate-spinSlow"
           />
         </div>
 
@@ -119,7 +119,12 @@ const Home = () => {
           offline branches.            
           </p>
           <p className="text-gray-300 mb-8">
-            These platforms offer a wide range of games from traditional casino games like poker, blackjack and roulette to more modern games like video slots and virtual sports betting. Online casinos have the advantage of being accessible from anywhere at any time making them a convenient option for many players.
+            These platforms offer a wide range of games from traditional casino games like 
+            poker, blackjack and roulette to more modern games like video slots and virtual 
+            sports betting. Online casinos have the advantage of being accessible from 
+            
+            
+            anywhere at any time making them a convenient option for many players.
           </p>
           <button className="bg-[#DA9100] text-white font-semibold px-6 py-2 rounded-md hover:scale-105 transition flex items-center gap-2">
             <span>◀</span> Read More <span>▶</span>
@@ -147,7 +152,18 @@ const Home = () => {
                 Our Services
             </h2>
             <p className="text-gray-300 mt-4 max-w-3xl mx-auto">
-                At Reddy Anna Book Official, our commitment is to provide an unparalleled online gaming experience marked by excitement, security, and innovation. As a leading platform, we offer a diverse array of sports games, ranging from cricket and basketball to football and tennis, ensuring there's something for every sports enthusiast. Our live casinos provide a dynamic and immersive gaming environment, allowing users to test their luck in real-time. Security is paramount to us, and we employ advanced encryption technologies to safeguard user information. With a user-friendly interface, seamless navigation, and a dedication to responsible gaming practices, Reddy Anna ensures that every player enjoys a thrilling yet responsible gaming journey. Join us and discover a world where entertainment meets excellence, and where your gaming satisfaction is our top priority.
+                At Reddy Anna Book Official, our commitment is to provide an unparalleled 
+                online gaming experience marked by excitement, security, and innovation. 
+                As a leading platform, we offer a diverse array of sports games, ranging 
+                from cricket and basketball to football and tennis, ensuring there's 
+                something for every sports enthusiast. Our live casinos provide a dynamic 
+                and immersive gaming environment, allowing users to test their luck in 
+                real-time. Security is paramount to us, and we employ advanced encryption 
+                technologies to safeguard user information. With a user-friendly interface, 
+                seamless navigation, and a dedication to responsible gaming practices, 
+                Reddy Anna ensures that every player enjoys a thrilling yet responsible 
+                gaming journey. Join us and discover a world where entertainment meets 
+                excellence, and where your gaming satisfaction is our top priority.
             </p>
             </div>
 
@@ -173,7 +189,8 @@ const Home = () => {
                     <div>
                     <h4 className="text-cyan-400 font-bold text-lg mb-1">{item.title}</h4>
                     <p className="text-gray-300 text-sm">
-                        One of the biggest advantages of online casinos is the wide range of games they like poker blackjack offer.
+                        One of the biggest advantages of online casinos is the wide range 
+                        of games they like poker blackjack offer.
                     </p>
                     </div>
                 </div>
@@ -182,11 +199,11 @@ const Home = () => {
 
             {/* Right Image */}
             <div className="w-full lg:w-1/3 flex justify-center">
-                <img
+              <img
                 src={hero2}
                 alt="Casino Card and Chips"
-                className="w-full max-w-xs md:max-w-sm lg:max-w-md"
-                />
+                className="w-full max-w-xs md:max-w-sm lg:max-w-md animate-sideToSide"
+              />
             </div>
 
             </div>
@@ -199,8 +216,10 @@ const Home = () => {
           Awesome Casino Games
         </h2>
         <p className="text-gray-300 mt-4 max-w-2xl mx-auto">
-          Do you want to open your cricket ID online but can't find a trustworthy betting platform? Here's a Reddy Anna Book for you.
-          This is India's most famous and trusted cricket demo ID platform. Reddy Anna Book is India's largest exchange platform
+          Do you want to open your cricket ID online but can't find a trustworthy 
+          betting platform? Here's a Reddy Anna Book for you.
+          This is India's most famous and trusted cricket demo ID platform. 
+          Reddy Anna Book is India's largest exchange platform
           offering fantastic online sports betting with a 24-hour withdrawal service.
         </p>
       </div>
@@ -232,70 +251,85 @@ const Home = () => {
       </div>
     </section>
     {/* ----------------- Contact Section ----------------------------------------- */}
-    <section id="contact" className="bg-black text-white px-6 py-12 md:px-20 lg:px-32">
-      <h2 className="text-4xl md:text-5xl lg:text-5xl font-bold leading-tight mb-4 text-center mb-5">
-        Contact Us
-      </h2>
-      <section className="grid md:grid-cols-2 gap-10 items-start">
-        {/* Left Text Content */}
-        <section>
-          <h2 className="text-4xl md:text-3xl font-bold mb-6">
-            <span className="text-cyan-400">Contact</span>{" "}
-            <span className="text-cyan-400">For More</span>{" "}
-            <span className="text-cyan-400">Information</span>
-          </h2>
-          <p className="text-lg leading-relaxed mb-6">
-            Online casinos have become a popular form of entertainment for
-            people all over the world. These platforms offer a wide range of
-            games from traditional casino games like poker, blackjack, and
-            roulette.
-          </p>
-          <section className="space-y-4">
-            <div className="flex items-center gap-3">
-              <FaPhoneAlt className="text-cyan-400" />
-              <span>+0123 456 789</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <FaEnvelope className="text-cyan-400" />
-              <span>example@example.com</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <FaMapMarkerAlt className="text-cyan-400" />
-              <span>New Rose Valley Park, NYZ</span>
-            </div>
-          </section>
-        </section>
+    <section
+      id="contact"
+      className="relative bg-black text-white px-6 py-12 md:px-20 lg:px-32 overflow-hidden"
+    >
+      {/* Background Image (imported and blurred) */}
+      <div
+        className="absolute inset-0 bg-cover bg-center z-0 blur-sm opacity-30"
+        style={{
+          backgroundImage: `url(${con_bg})`,
+        }}
+      ></div>
 
-        {/* Right Contact Form */}
-        <form className="space-y-4">
-          <div className="grid sm:grid-cols-2 gap-4">
-            <input
-              type="text"
-              placeholder="Name*"
+      {/* Foreground content */}
+      <div className="relative z-10">
+        <h2 className="text-4xl md:text-5xl lg:text-5xl font-bold leading-tight mb-4 text-center mb-5">
+          Contact Us
+        </h2>
+        <section className="grid md:grid-cols-2 gap-10 items-start">
+          {/* Left Text Content */}
+          <section>
+            <h2 className="text-4xl md:text-3xl font-bold mb-6">
+              <span className="text-cyan-400">Contact</span>{" "}
+              <span className="text-cyan-400">For More</span>{" "}
+              <span className="text-cyan-400">Information</span>
+            </h2>
+            <p className="text-lg leading-relaxed mb-6">
+              Online casinos have become a popular form of entertainment for
+              people all over the world. These platforms offer a wide range of
+              games from traditional casino games like poker, blackjack, and
+              roulette.
+            </p>
+            <section className="space-y-4">
+              <div className="flex items-center gap-3">
+                <FaPhoneAlt className="text-cyan-400" />
+                <span>+0123 456 789</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <FaEnvelope className="text-cyan-400" />
+                <span>example@example.com</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <FaMapMarkerAlt className="text-cyan-400" />
+                <span>New Rose Valley Park, NYZ</span>
+              </div>
+            </section>
+          </section>
+
+          {/* Contact Form */}
+          <form className="space-y-4">
+            <div className="grid sm:grid-cols-2 gap-4">
+              <input
+                type="text"
+                placeholder="Name*"
+                className="w-full bg-black border border-white text-white px-4 py-3 rounded focus:outline-none"
+                required
+              />
+              <input
+                type="email"
+                placeholder="Email*"
+                className="w-full bg-black border border-white text-white px-4 py-3 rounded focus:outline-none"
+                required
+              />
+            </div>
+            <textarea
+              placeholder="Enter your message"
+              rows="5"
               className="w-full bg-black border border-white text-white px-4 py-3 rounded focus:outline-none"
-              required
-            />
-            <input
-              type="email"
-              placeholder="Email*"
-              className="w-full bg-black border border-white text-white px-4 py-3 rounded focus:outline-none"
-              required
-            />
-          </div>
-          <textarea
-            placeholder="Enter your message"
-            rows="5"
-            className="w-full bg-black border border-white text-white px-4 py-3 rounded focus:outline-none"
-          ></textarea>
-          <button
-            type="submit"
-            className="bg-[#DA9100]  text-white font-semibold px-6 py-3 rounded shadow-lg hover:from-pink-500 hover:to-cyan-400 transition duration-300"
-          >
-            Submit Now
-          </button>
-        </form>
-      </section>
+            ></textarea>
+            <button
+              type="submit"
+              className="bg-[#DA9100] text-white font-semibold px-6 py-3 rounded shadow-lg hover:from-pink-500 hover:to-cyan-400 transition duration-300"
+            >
+              Submit Now
+            </button>
+          </form>
+        </section>
+      </div>
     </section>
+
     {/* ------------------------ Footer section ----------------------------------------- */}
     <section className=" p-[2px] bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-500">
       <footer className="bg-black text-white px-6 md:px-16 py-12 border-t-[2px] border-transparent ">
@@ -305,7 +339,9 @@ const Home = () => {
           <div>
             <h3 className="text-cyan-400 font-bold text-lg mb-4">ABOUT US</h3>
             <p className="text-gray-200 text-sm leading-relaxed mb-4">
-              One of the biggest advantages of online casinos is the wide range of games they offer. Many types of casino games may have a limited selection due to space constraints.
+              One of the biggest advantages of online casinos is the wide range of games 
+              they offer. Many types of casino games may have a limited selection due to 
+              space constraints.
             </p>
             <div className="flex items-center gap-3">
               <span className="text-pink-500">Follow :</span>
@@ -344,7 +380,9 @@ const Home = () => {
           <div>
             <h3 className="text-cyan-400 font-bold text-lg mb-4">NEWSLETTER</h3>
             <p className="text-gray-200 text-sm mb-4">
-              Subscribe to our online casino platform newsletter to get the latest updates. Casinos have become a popular form of entertainment for people all over the world.
+              Subscribe to our online casino platform newsletter to get the latest updates. 
+              Casinos have become a popular form of entertainment for people all over the 
+              world.
             </p>
             <div className="flex">
               <input
