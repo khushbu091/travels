@@ -1,26 +1,22 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      fontFamily: {
-        heading: ['Cinzel', 'serif'],
-        body: ['Rajdhani', 'sans-serif'],
+      keyframes: {
+        "border-spin": {
+          "0%": { borderColor: "#facc15 transparent transparent transparent" },
+          "25%": { borderColor: "transparent #facc15 transparent transparent" },
+          "50%": { borderColor: "transparent transparent #facc15 transparent" },
+          "75%": { borderColor: "transparent transparent transparent #facc15" },
+          "100%": { borderColor: "#facc15 transparent transparent transparent" },
+        },
       },
       animation: {
-        spinSlow: 'spin 10s linear infinite',
-        float: 'float 3s ease-in-out infinite',
-        sideToSide: 'sideToSide 2s ease-in-out infinite', // ✅ New animation
+        "border-spin": "border-spin 2s linear infinite",
       },
-      keyframes: {
-        float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-10px)' },
-        },
-        sideToSide: {
-          '0%, 100%': { transform: 'translateX(0)' },
-          '50%': { transform: 'translateX(10px)' }, // 🎯 Or try 5px for even subtler effect
-        },
+      fontFamily: {
+        outfit: ['Outfit', 'sans-serif'],
       },
     },
   },
