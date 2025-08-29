@@ -16,7 +16,7 @@ module.exports = {
         "border-spin": "border-spin 2s linear infinite",
       },
       fontFamily: {
-        outfit: ['Outfit', 'sans-serif'],
+         sans: ['Open Sans', 'sans-serif'],
       },
     },
   },

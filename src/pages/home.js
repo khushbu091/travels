@@ -151,12 +151,12 @@ const Home = () => {
         </div>
       </div>
 
-      <section className="px-6 py-12 md:px-16 bg-white w-full">
+      <section className="px-6 py-12 md:px-16 bg-[#f5f5f5] w-full">
             <div className="text-center mb-10">
               <button className="bg-blue-50 text-blue-600 px-4 py-1 rounded-full text-sm font-medium">
                 ✈ Destination List
               </button>
-              <h2 className="text-5xl md:text-6xl font-bold mt-4 font-outfit">
+              <h2 className="text-5xl md:text-6xl font-bold mt-4 font-sans  text-[#202124]">
                 Explore Beautiful <br /> Places Around World
               </h2>
             </div>
@@ -312,7 +312,7 @@ const Home = () => {
         {/* Left Content */}
         <div>
           <p className="text-black italic text-lg mb-2 font-outfit">Download Our App</p>
-          <h2 className="text-5xl font-outfit font-bold text-black leading-snug mb-4">
+          <h2 className="text-4xl font-outfit font-bold text-black leading-snug mb-4">
             Download Mobile App To <br /> Explore Trabely
           </h2>
           <p className="text-gray-700 text-lg mb-6 font-outfit">
