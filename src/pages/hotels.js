@@ -1,3 +1,6 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
+
 import heroImg from "../image/hero3.jpg";
 import { FaStar } from "react-icons/fa";
 import { FaApple, FaGooglePlay } from "react-icons/fa";
@@ -10,14 +13,16 @@ import f1 from "../image/f1.png";
 import f2 from "../image/f2.png";
 import f3 from "../image/f3.png";
 import f4 from "../image/f4.png";
+import f5 from "../image/46399.jpg";
 import DownloadImg from "../image/29.png";
+
 const menuItems = [
-  { name: "Flights", icon: <FaPlane /> },
-  { name: "Hotels", icon: <FaHotel /> },
-  { name: "Holiday Packages", icon: <FaUmbrellaBeach /> },
-  { name: "Trains", icon: <FaTrain /> },
-  { name: "Cabs", icon: <FaTaxi /> },
-  { name: "Tours & Attractions", icon: <FaMapMarkedAlt /> },
+  { name: "Flights", icon: <FaPlane />, path: "/flights" },
+  { name: "Hotels", icon: <FaHotel />, path: "/hotels" },
+  { name: "Holiday Packages", icon: <FaUmbrellaBeach />, path: "/packages" },
+  { name: "Trains", icon: <FaTrain />, path: "/trains" },
+  { name: "Cabs", icon: <FaTaxi />, path: "/cabs" },
+  { name: "Tours & Attractions", icon: <FaMapMarkedAlt />, path: "/tours" },
 ];
   const destinations = [
     {
@@ -84,7 +89,8 @@ const hotels = [
   ];
 
 
-const Home = () => {
+const Hotel = () => {
+  const [active, setActive] = useState("Hotels");
   return (
     <>
       <div className="relative w-full h-[500px] mt-[50px]">
@@ -105,19 +111,34 @@ const Home = () => {
             Find Your Dream Destination
           </h1>
 
-          <nav className="bg-white font-outfit px-6 py-3 flex justify-center flex-wrap gap-2 md:gap-3 text-sm md:text-md font-medium 
-            shadow-md rounded-2xl w-[90%] max-w-4xl relative z-10">
-            {menuItems.map((item, i) => (
-              <a
-                key={i}
-                href="#"
-                className="flex items-center gap-2 px-4 py-1.5 rounded-full text-gray-700 text-[16px] hover:bg-blue-500 hover:text-white transition-all duration-300"
-              >
-                <span className="text-orange-500">{item.icon}</span> 
-                <span>{item.name}</span>
-              </a>
-            ))}
-          </nav>
+          {/* 🔥 Menu with active state */}
+            <nav className="bg-white font-outfit px-6 py-3 flex justify-center flex-wrap gap-2 md:gap-3 text-sm md:text-md font-medium 
+                        shadow-md rounded-2xl w-[90%] max-w-4xl relative z-10">
+              {menuItems.map((item, i) => (
+                <Link
+                  key={i}
+                  to={item.path} // 👈 link path
+                  onClick={() => setActive(item.name)}
+                  className={`flex items-center gap-2 px-4 py-1.5 rounded-full text-[16px] transition-all duration-300
+                    ${
+                      active === item.name
+                        ? "bg-[#FA9A3D] text-white"
+                        : "text-gray-700 hover:bg-[#FA9A3D] hover:text-white"
+                    }`}
+                >
+                  <span
+                    className={`${
+                      active === item.name
+                        ? "text-white"
+                        : "text-orange-500 group-hover:text-white"
+                    }`}
+                  >
+                    {item.icon}
+                  </span>
+                  <span>{item.name}</span>
+                </Link>
+              ))}
+            </nav>
 
           {/* Search Box */}
           <div className="bg-gray-100 font-outfit rounded-2xl shadow-md snake-animate flex flex-col md:flex-row items-center w-[90%] max-w-6xl h-[100px] mx-auto -mt-3 relative z-0">
@@ -233,7 +254,7 @@ const Home = () => {
       <div className="w-[250px] h-[530px] sticky top-20 rounded-2xl overflow-hidden relative">
         {/* Background Image */}
         <img
-          src={heroImg} 
+          src={f5} 
           alt="Summer Deals"
           className="w-full h-full object-cover"
         />
@@ -304,51 +325,52 @@ const Home = () => {
             ))}
           </div>
         </div>
-      <section className="bg-white w-[1200px] mx-auto rounded-xl relative overflow-hidden py-16 mb-10">
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-10"></div>
+       <section className="bg-white w-[1200px] mx-auto rounded-xl relative overflow-hidden pt-16 pb-0 mb-10">
+  {/* Background pattern */}
+  <div className="absolute inset-0 opacity-10"></div>
 
-      <div className="container mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-10 items-center">
-        {/* Left Content */}
-        <div>
-          <p className="text-black italic text-lg mb-2 font-outfit">Download Our App</p>
-          <h2 className="text-4xl font-outfit font-bold text-black leading-snug mb-4">
-            Download Mobile App To <br /> Explore Trabely
-          </h2>
-          <p className="text-gray-700 text-lg mb-6 font-outfit">
-            It is a long established fact that a reader will be distracted
-            readable content of a page when looking at layout the point.
-          </p>
+  <div className="container mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-10">
+    {/* Left Content */}
+    <div className="flex flex-col justify-center">
+      <p className="text-black italic text-lg mb-2 font-outfit">Download Our App</p>
+      <h2 className="text-4xl font-outfit font-bold text-black leading-snug mb-4">
+        Download Mobile App To <br /> Explore Trabely
+      </h2>
+      <p className="text-gray-700 text-lg mb-6 font-outfit">
+        It is a long established fact that a reader will be distracted
+        readable content of a page when looking at layout the point.
+      </p>
 
-          <div className="flex gap-4">
-            <a
-              href="#"
-              className="flex items-center gap-2 bg-white text-black font-medium px-4 py-2 rounded-full shadow hover:scale-105 transition"
-            >
-              <FaApple className="text-3xl" /> Get it on App Store
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-2 bg-white text-black font-medium px-4 py-2 rounded-full shadow hover:scale-105 transition"
-            >
-              <FaGooglePlay className="text-3xl" /> Get it on Google Play
-            </a>
-          </div>
-        </div>
-
-        {/* Right Image */}
-        <div className="flex justify-center">
-          <img
-            src={DownloadImg}
-            alt="Download App"
-            className="max-w-lg rounded-lg"
-          />
-        </div>
+      <div className="flex gap-4">
+        <a
+          href="#"
+          className="flex items-center gap-2 bg-white text-black font-medium px-4 py-2 rounded-full shadow hover:scale-105 transition"
+        >
+          <FaApple className="text-3xl" /> Get it on App Store
+        </a>
+        <a
+          href="#"
+          className="flex items-center gap-2 bg-white text-black font-medium px-4 py-2 rounded-full shadow hover:scale-105 transition"
+        >
+          <FaGooglePlay className="text-3xl" /> Get it on Google Play
+        </a>
       </div>
-    </section>
+    </div>
+
+    {/* Right Image - Touch bottom */}
+    <div className="flex justify-center items-end">
+      <img
+        src={DownloadImg}
+        alt="Download App"
+        className="max-w-lg rounded-lg"
+      />
+    </div>
+  </div>
+</section>
+
 
     </>
   );
 };
 
-export default Home;
+export default Hotel;
