@@ -160,7 +160,7 @@ const menuItems = [
   { name: "Holiday Packages", icon: <FaUmbrellaBeach />, path: "/packages" },
   { name: "Trains", icon: <FaTrain />, path: "/trains" },
   { name: "Cabs", icon: <FaTaxi />, path: "/cabs" },
-  { name: "Tours & Attractions", icon: <FaMapMarkedAlt />, path: "/tours" },
+  { name: "Visa", icon: <FaMapMarkedAlt />, path: "/visa" },
 ];
 
 const flights = [

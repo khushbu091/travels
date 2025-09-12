@@ -27,7 +27,7 @@ const menuItems = [
   { name: "Holiday Packages", icon: <FaUmbrellaBeach />, path: "/packages" },
   { name: "Trains", icon: <FaTrain />, path: "/trains" },
   { name: "Cabs", icon: <FaTaxi />, path: "/cabs" },
-  { name: "Tours & Attractions", icon: <FaMapMarkedAlt />, path: "/tours" },
+  { name: "Visa", icon: <FaMapMarkedAlt />, path: "/visa" },
 ];
   const features = [
     { title: "PNR Status Enquiry", icon: <TicketCheck className="w-8 h-8" /> },
@@ -166,7 +166,7 @@ const Trains=()=>{
         const [date, setDate] = useState("");
         const [classType, setClassType] = useState("AC & non-AC");
         const filters = ["AC & non-AC", "AC only", "Non-AC only"];
-        const dates = ["9 Sep Today", "10 Sep Wed", "11 Sep Thu"];
+        const dates = ["9 Sep Today", "10 Sep Wed", "11 Sep Thur"];
         const handleSwap = () => {
             setFrom(to);
             setTo(from);
@@ -337,7 +337,7 @@ const Trains=()=>{
       <section className="max-w-7xl mx-auto px-6 py-12 text-center font-outfit">
       {/* Heading */}
       <h2 className="text-2xl md:text-3xl font-bold mb-12">
-        Explore More With <span className="text-black">EaseMyTrip</span>
+        Explore More With <span className="text-orange-600">Travel's</span>
       </h2>
 
       {/* Single Row Features */}
